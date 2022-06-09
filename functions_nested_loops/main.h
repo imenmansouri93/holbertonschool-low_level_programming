@@ -1,4 +1,9 @@
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
-}
+#include<stdio.h> 
+#include<stdlib.h>
+
+/* File: main.h
+*
+*
+*header file containing the functions_nested
+*/
+int _putchar(char c);
