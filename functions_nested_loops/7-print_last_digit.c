@@ -11,6 +11,6 @@ if (l < 0)
 {
 l = l * -1;
 }
-_putchar('0'+ l);
+_putchar('0' + l);
 return (l);
 }
