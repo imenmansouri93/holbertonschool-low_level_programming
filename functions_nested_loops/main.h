@@ -7,3 +7,4 @@
 *header file containing the functions_nested
 */
 int _putchar(char c);
+void print_alphabet(void) 
