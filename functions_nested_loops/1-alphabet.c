@@ -1,16 +1,17 @@
-#include"main.h"
+#include "main.h"
 /*
-*main -prints the alphabet, in lowercase
-*
-*Return: Alaways 0
-*/
+ *main -prints the alphabet, in lowercase
+ *
+ *Return: Alaways 0
+ */
 
-void print_alphabet(void) {
-char ch;
-for (ch = 'a'; ch <= 'z'; ch++)
+void print_alphabet(void)
 {
-_putchar(ch);
-}
-putchar('\n');
-return (0);
+    char ch;
+    for (ch = 'a'; ch <= 'z'; ch++)
+    {
+        _putchar(ch);
+    }
+    putchar('\n');
+    return (0);
 }
