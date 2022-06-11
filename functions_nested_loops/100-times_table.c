@@ -16,7 +16,14 @@ for (j = 0; j < n + 1; j++)
 {
 if (j != n)
 {
-printf("%d,   ", i * j);
+	if (j * i < 9)
+		printf("%d,   ", i * j);
+	else if (i * j < 90)
+		printf("%d,  ", i * j);
+	else
+		printf("%d, ", i * j);
+
+
 }
 else
 {
