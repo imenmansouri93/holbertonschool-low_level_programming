@@ -8,7 +8,7 @@
 
 int _isdigit(int c)
 {
-for (c = 0; c < 9; c++)
+for (c = 32; c < 126; c++)
 if (isdigit(c) == 0)
 {
 return (1);
