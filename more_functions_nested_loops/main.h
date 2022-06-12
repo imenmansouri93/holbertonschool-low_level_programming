@@ -5,8 +5,9 @@
 /* File: main.h
  *
  *
- *header file containing the functions_nested
+ * header file containing the functions_nested
  */
 int _putchar(char c);
 int _isupper(int c);
 int _isdigit(int c);
+int mul(int a, int b);
