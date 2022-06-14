@@ -12,7 +12,7 @@ int l = 0;
 l = strlen(str);
 if (l % 2 != 0)
 {
-_putchar(n = (l - 1) / 2);
+n = ((l - 1) / 2);
 n++;
 }
 else
