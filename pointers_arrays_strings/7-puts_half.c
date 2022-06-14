@@ -18,7 +18,7 @@ else
 {
 n = l / 2;
 }
-for (; n < l+1; n++)
+for (; n < l; n++)
 _putchar(str[n]);
 _putchar('\n');
 }
