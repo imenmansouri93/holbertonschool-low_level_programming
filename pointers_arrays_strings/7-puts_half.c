@@ -7,7 +7,7 @@
  */
 void puts_half(char *str)
 {
-int  n;
+int  n, i;
 int l = 0;
 l = strlen(str);
 if (l % 2 != 0)
@@ -19,9 +19,9 @@ else
 {
 n = l / 2;
 }
-for (; n < l; n++)
+for (i = n; i < l; i++)
 {
-	_putchar(str[n]);
+	_putchar(str[i]);
 }
 _putchar('\n');
 }
