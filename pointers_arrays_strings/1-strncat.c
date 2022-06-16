@@ -13,6 +13,7 @@ int l = 0;
 int i = 0;
 l = strlen(src);
 for (i = 0; src[i] && i < n && i < n; i++)
-dest[l] = src[i];
+dest[l++] = src[i];
+
 return (dest);
 }
