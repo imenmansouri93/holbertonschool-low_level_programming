@@ -17,7 +17,7 @@ for (j = 1; accept[j] != '\0'; j++)
 {
 if (s[i] == accept[j])
 {
-if (j <= pos)
+if (j < pos)
 {
 pos = j;
 flag = 1;
