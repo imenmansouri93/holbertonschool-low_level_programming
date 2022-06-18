@@ -17,7 +17,7 @@ _putchar(' ');
 for (i = 0; i < j; i++)
 _putchar('#');
 if (j == size)
-break;
+continue;
 _putchar('\n');
 }
 }
