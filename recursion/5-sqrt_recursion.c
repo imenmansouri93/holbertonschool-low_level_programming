@@ -22,7 +22,7 @@ return (isqrt_rec(next_k, n));
 */
 int _sqrt_recursion(int n)
 {
-if (n < 0 || (n % 2 != 0 && n % 3 != 0 && n % 5 !=  0 && n % 7 != 0))
+if (n < 0)
 {
 return (-1);
 }
