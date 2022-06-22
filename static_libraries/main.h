@@ -1,12 +1,6 @@
 #ifndef MAIN_H
 #define MAIN_H
 #include <stdio.h>
-
-/* File: main.h
- *
- *
- * header file containing the functions_nested
- */
 int _putchar(char c);
 int _islower(int c);
 int _isalpha(int c);
