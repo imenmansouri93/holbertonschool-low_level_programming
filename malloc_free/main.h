@@ -5,12 +5,11 @@
 #include <ctype.h>
 #include <string.h>
 #include <stddef.h>
-
 /* File: main.h
  *
  *
  * header file containing the functions_nested
  */
 char *create_array(unsigned int size, char c);
-
+char *_strdup(char *str);
 #endif
