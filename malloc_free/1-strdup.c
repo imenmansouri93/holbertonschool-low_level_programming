@@ -7,12 +7,12 @@
 char *_strdup(char *str)
 {
 char *src;
-src = (char *)malloc(strlen(str) + 1 * sizeof(char));
 if (str == NULL)
 {
 return (NULL);
 }
 else
+src = (char *)malloc(strlen(str) + 1 * sizeof(char));
 {
 if (src == NULL)
 {
