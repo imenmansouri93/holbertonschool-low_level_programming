@@ -17,7 +17,7 @@ return (NULL);
 else
 {
 if (src ==  NULL)
-return (1);
+return (NULL);
 else
 strcpy(src, str);
 }
