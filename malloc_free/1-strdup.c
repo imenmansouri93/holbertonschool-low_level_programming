@@ -16,10 +16,14 @@ return (NULL);
 }
 else
 {
-if (src ==  NULL)
+if (src == NULL)
+{
 return (NULL);
+}
 else
+{
 strcpy(src, str);
+}
 }
 return (src);
 }
