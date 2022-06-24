@@ -7,19 +7,18 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-char *rtn = malloc(strlen(s1) + strlen(s2) + 1);
+
 int p, q = 0;
-if (*s1 == '\0' || *s2 == '\0')
-{
-return (NULL);
-}
-else
-{
+char *rtn;
+if (s1 == NULL)
+s1 = "";
+if (s2 == NULL)
+s2 = "";
+rtn = malloc(strlen(s1) + strlen(s2) + 1 * sizeof(char));
 for (p = 0; (rtn[q] = s1[p]) != '\0'; ++p)
 ++q;
 for (p = 0; (rtn[q] = s2[p]) != '\0'; ++p)
 ++q;
-}
+rtn[q] = '\0';
 return (rtn);
-free(rtn);
 }
