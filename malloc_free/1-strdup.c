@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * *_strdup - function that returns a ptr to a newly allocated space in memory
+ * *_strdup - function that returns newly allocated
  * @str: string
  * Return: duplicated string
  */
