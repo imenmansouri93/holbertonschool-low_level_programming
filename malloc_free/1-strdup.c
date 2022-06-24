@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * *_strdup - function that returns newly allocated
+ * *_strdup - function that returns a ptr to a newly allocated space in memory
  * @str: string
  * Return: duplicated string
  */
@@ -17,7 +17,7 @@ return (NULL);
 else
 {
 if (src ==  NULL)
-return (NULL);
+return (1);
 else
 strcpy(src, str);
 }
