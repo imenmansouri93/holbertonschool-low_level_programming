@@ -18,9 +18,9 @@ for (i = 1; i < ac; i++)
 {
 len += strlen(av[i]);
 }
+str = malloc(sizeof(char) * len + 1);
 if (str == NULL)
 return (NULL);
-str = malloc(sizeof(char) * len + 1);
 for (i = 0; i < ac; i++)
 {
 for (j = 0; av[i][j]; j++)
