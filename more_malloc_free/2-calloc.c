@@ -16,7 +16,7 @@ if (arr == NULL)
 {
     return(NULL);
 }
-for ( i = 0; i < (size); i++)
+for ( i = 0; i < (size * nmemb); i++)
 {
 arr[i] = 0;
 }
