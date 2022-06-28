@@ -16,7 +16,7 @@ if (arr == NULL)
 {
     return(NULL);
 }
-while (i < size)
+while (i < (nmemb * size))
 {
    arr[i] = 0;
    i++;
