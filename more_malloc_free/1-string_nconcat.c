@@ -34,4 +34,5 @@ if (s2 == NULL)
 s = s1;
 }
 return (s);
+free(s);
 }
