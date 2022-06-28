@@ -21,10 +21,18 @@ if (n >= (unsigned int)s2_length)
 {
 s[s1_length] = *s2;
 }
+if (s1 == NULL)
+{
+   s = s2;
+}
+if (s2 == NULL)
+{
+  s = s1;
+}
+
 for (i = 0; i < s1_length; i++)
 s[i] = s1[i];
 for (i = 0; s2[i] && (unsigned int)i < n; i++)
 s[s1_length + i] = s2[i];
 return (s);
-free(s);
 }
