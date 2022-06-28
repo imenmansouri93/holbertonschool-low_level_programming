@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- *
+ * *_calloc - 
  *
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
@@ -16,9 +16,11 @@ if (arr == NULL)
 {
     return(NULL);
 }
-for ( i = 0; i < (size * nmemb); i++)
+while (i < size)
 {
-arr[i] = 0;
+   arr[i] = 0;
+   i++;
 }
+
 return(arr);
 }
