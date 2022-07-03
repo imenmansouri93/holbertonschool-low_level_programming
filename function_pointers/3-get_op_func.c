@@ -2,6 +2,11 @@
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
+/**
+ * get_op_func - selects the correct fnctn to perform the opr asked by user.
+ * @s: the operator passed as argument to the program
+ * Return: pointer to the function
+ */
 int (*get_op_func(char *s))(int, int)
 {
 op_t ops[] = {
@@ -19,5 +24,5 @@ if (strcmp(s, ops[i].op) == 0)
 return (ops[i].f);
 i++;
 }
-return(NULL);
+return (NULL);
 }
