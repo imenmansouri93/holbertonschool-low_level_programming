@@ -4,8 +4,10 @@
 #include <stdio.h>
 #include "variadic_functions.h"
 /**
- * 
- * 
+ * print_strings - function that prints strings
+ * @separator: char
+ * @n: int
+ * Return: nothing
  */
 void print_strings(const char *separator, const unsigned int n, ...)
 {
@@ -17,10 +19,10 @@ for (i = 0; i < n; i++)
 {
 str = va_arg(als, char *);
 if (str == NULL)
-printf("%s","(nil)");
+printf("%s", "(nil)");
 else
 printf("%s", str);
-if (i != n-1 && separator != NULL)
+if (i != n - 1 && separator != NULL)
 printf("%s", separator);
 }
 printf("\n");
