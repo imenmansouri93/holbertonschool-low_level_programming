@@ -18,7 +18,12 @@ for (i  = 0; i<n; i++)
 if (separator != NULL)
 {
 A = va_arg(al, int);
-printf("%d %s", A, separator);
+printf("%d" "%s", A,separator);
+if (i == n-1)
+{
+printf("%d", A);
+}
+
 }
 va_end(al);
  printf ("\n");
