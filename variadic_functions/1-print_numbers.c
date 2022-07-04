@@ -18,7 +18,7 @@ for (i  = 0; i<n; i++)
 if (separator != NULL)
 {
 A = va_arg(al, int);
-printf("%d" "%s", A,separator);
+printf("%d; ", A);
 if (i == n-1)
 {
 printf("%d", A);
