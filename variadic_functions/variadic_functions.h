@@ -5,11 +5,10 @@
 #include <stdio.h>
 /**
  * File - variadic_function.h
- *
  * header file containing the functions_nested
+ * sum_them_all - function that returns the sum of all its parameters
+ * @n: number of int
+ * Return: sum of int
  */
-
-
-
 int sum_them_all(const unsigned int n, ...);
 #endif
