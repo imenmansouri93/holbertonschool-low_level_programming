@@ -1,3 +1,5 @@
+#ifndef SUM_THEM_ALL_C
+#define SUM_THEM_ALL_C
 #include <stdio.h>
 #include <stdarg.h>
 #include "variadic_functions.h"
@@ -20,3 +22,4 @@ s += va_arg(ap, int);
 va_end(ap);
 return (s);
 }
+#endif
