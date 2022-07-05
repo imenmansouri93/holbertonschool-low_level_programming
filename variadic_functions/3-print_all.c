@@ -34,7 +34,7 @@ while (j < 5)
 {
 if (format[i] == *typeformat[j].type)
 {
-    printf("%s", separator);
+printf("%s", separator);
 typeformat[j].f(args);
 separator = ", ";
 }
@@ -77,9 +77,7 @@ void print_string(va_list arg)
 {
 char *str;
 str = va_arg(arg, char *);
-if (str == NULL)
-printf("%s", "(nil)");
-else
+if (str != NULL)
 printf("%s", str);
 }
 /**
