@@ -65,8 +65,8 @@ void print_string(va_list arg)
 void print_all(const char *const format, ...)
 {
     va_list args;
-    unsigned int i = 0;
-    unsigned int j = 0;
+    int i = 0;
+    int j = 0;
     char *separator = "";
     format_t typeformat[] = {
         {"c", print_char},
@@ -79,12 +79,14 @@ void print_all(const char *const format, ...)
     {
         j = 0;
         while (j < 4 && (*(format + i) != *(typeformat[j].type)))
-            j++;
+         j++;
+        {
         if (j < 4)
         {
             printf("%s", separator);
             typeformat[j].f(args);
             separator = ", ";
+        }
         }
         i++;
     }
