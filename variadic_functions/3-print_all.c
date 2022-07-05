@@ -21,7 +21,6 @@ format_t typeformat[] = {
 {"i", print_int},
 {"d", print_float},
 {"s", print_string},
-{NULL, NULL},
 };
 unsigned  int i = 0;
 unsigned int j = 0;
@@ -30,7 +29,7 @@ va_start(args, format);
 while (format != NULL && format[i])
 {
 j = 0;
-while (j < 5)
+while (j < 4)
 {
 if (format[i] == *typeformat[j].type)
 {
