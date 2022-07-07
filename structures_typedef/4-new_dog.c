@@ -1,9 +1,9 @@
 #ifndef NEW_DOG_C
 #define NEW_DOG_C
+#include<stdlib.h>
 #include "dog.h"
-#include<string.h>
-#include <stdlib.h>
-char *_strdup(char *str);
+int _strlen(char *s);
+char *_strcpy(char *dest, char*src);
 /**
  * new_dog - function that creates a new dog
  * @name: variable pointing to name of dog
@@ -14,56 +14,58 @@ char *_strdup(char *str);
 dog_t *new_dog(char *name, float age, char *owner)
 {
 dog_t *my_dog;
-char *name1;
-char *owner1;
+int name1 = 0, owner1 = 0;
+
+if (name != NULL && owner != NULL)
+{
+   name1 = _strlen(name +1);
+   owner1 = _strlen(owner + 1);
 my_dog = malloc (sizeof(dog_t));
 if (my_dog == NULL)
 return (NULL);
-name1 = _strdup(name);
-if (name1 == NULL)
+my_dog->name = malloc(sizeof(char) * name1);
+if (my_dog->name == NULL)
 {
 free(my_dog);
 return (NULL);
 }
-owner1 = _strdup(owner);
-if (owner1 == NULL)
+my_dog->owner = malloc(sizeof(char) * owner1);
+if (my_dog->owner ==  NULL)
 {
-free(name1);
-free(my_dog);
-return(NULL);
+    free(my_dog->name);
+    free(my_dog);
+    return(NULL);
 }
-my_dog->name = name1;
-my_dog->owner = owner1;
+my_dog->name = _strcpy(my_dog->name, name);
+my_dog->owner = _strcpy(my_dog->owner,owner);
 my_dog->age = age;
-return (my_dog);
+}
+return(my_dog);
 }
 /**
  * 
  * 
  * 
  */
-char *_strdup(char *str)
+int _strlen(char *s)
 {
-char *des;
-int i = 0, j = 0;
-int len = 0;
-if (str ==  NULL)
-return (NULL);
-j = 0;
-while (*(str + i) != '\0')
+int i = 0;
+int l = 0;
+while (s[i] != '\0')
 {
-len++;
-j++;
-}
-des = malloc ((len + 1) * sizeof(char));
-if (des == NULL)
-return (NULL);
-while (i < len)
-{
-*(des + i) = *(str + i);
+l++;
 i++;
 }
-*(des + len) = '\0';
-return(des);
+return(l);
+}
+char *_strcpy(char *dest, char*src)
+{
+int i;
+for ( i = 0; src[i] != '\0' ; i++)
+{
+  dest[i] = src[i];
+}
+dest[i++] = '\0';
+return(dest);
 }
 #endif
