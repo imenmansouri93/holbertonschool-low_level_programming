@@ -18,8 +18,8 @@ int name1 = 0, owner1 = 0;
 
 if (name != NULL && owner != NULL)
 {
-   name1 = _strlen(name +1);
-   owner1 = _strlen(owner + 1);
+name1 = _strlen(name) +1;
+owner1 = _strlen(owner) + 1;
 my_dog = malloc (sizeof(dog_t));
 if (my_dog == NULL)
 return (NULL);
@@ -32,9 +32,9 @@ return (NULL);
 my_dog->owner = malloc(sizeof(char) * owner1);
 if (my_dog->owner ==  NULL)
 {
-    free(my_dog->name);
-    free(my_dog);
-    return(NULL);
+free(my_dog->name);
+free(my_dog);
+return(NULL);
 }
 my_dog->name = _strcpy(my_dog->name, name);
 my_dog->owner = _strcpy(my_dog->owner,owner);
