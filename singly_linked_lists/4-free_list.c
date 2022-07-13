@@ -11,8 +11,6 @@ while (head != NULL)
 {
 new_node = head;
 head = new_node->next;
-head = new_node->len;
-head = new_node->str;
 free(head);
 }
 }
