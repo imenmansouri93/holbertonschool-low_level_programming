@@ -10,7 +10,7 @@ list_t *new_node;
 while (head != NULL)
 {
 new_node = head;
-head = new_node->next;
-free(head);
+head = head->next;
+free(new_node);
 }
 }
