@@ -6,11 +6,12 @@
  */
 void free_list(list_t *head)
 {
-list_t *new_node;
-while (head != NULL)
+if (head == NULL)
 {
-new_node = head;
-head = head->next;
-free(new_node);
+return;
+}
+{
+free_list(head->next);
+free(head);
 }
 }
