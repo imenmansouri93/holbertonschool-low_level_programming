@@ -14,7 +14,6 @@ return(NULL);
 while (current != NULL)
 {
 if (count == index)
-current = current->next;
 return(current);
 count ++;
 current = current->next;
