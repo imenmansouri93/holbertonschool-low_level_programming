@@ -13,6 +13,6 @@ head = head->next;
 free(destroy);
 destroy = head;
 }
-head = NULL;//*free(head)//
+head = NULL;  //*free(head)//
 }
 
