@@ -1,11 +1,12 @@
 #include "lists.h"
 /**
- * @brief 
- * 
+ * print_listint - function that print all the elements
+ * @h: pointer to the start of the list
+ * Return: the number of nodes
  */
 size_t print_listint(const listint_t *h)
 {
- const listint_t *tmp;
+const listint_t *tmp;
 unsigned int i;
 tmp = h;
 for (i = 0; tmp != NULL; i++)
