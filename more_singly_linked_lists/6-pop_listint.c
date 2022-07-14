@@ -5,17 +5,19 @@
  */
 int pop_listint(listint_t **head)
 {
-int success ;
+listint_t *new_head;
+int n= 0;
 while (*head != NULL)
 {
 head = &(*head)->next;
 }
-success = *head != NULL;
-if (success)
+
+if (*head != NULL)
 {
-listint_t *current = *head;
-free(current);
-*head = (*head)->next;
+new_head =(*head)->next;
+n = (*head)->n;
+free(*head);
+*head =  new_head;
 }
-return(success);
+return(n);
 }
