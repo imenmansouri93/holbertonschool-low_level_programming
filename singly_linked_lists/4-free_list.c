@@ -6,11 +6,13 @@
  */
 void free_list(list_t *head)
 {
-list_t *tmp;
-while (head != NULL)
+list_t *destroy = head;
+while (head)
 {
-tmp = head;
 head = head->next;
-free(tmp);
+free(destroy);
+destroy = head;
 }
+head = NULL;//*free(head)//
 }
+
