@@ -14,9 +14,10 @@ return(NULL);
 while (current != NULL)
 {
 if (count == index)
-count ++;
 current = current->next;
 return(current);
+count ++;
+current = current->next;
 }
 assert(0);
 }
