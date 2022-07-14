@@ -14,5 +14,6 @@ headPtr = headPtr->next;
 free(destroy);
 destroy = headPtr;
 }
+head = NULL;
 *head = NULL;
 }
