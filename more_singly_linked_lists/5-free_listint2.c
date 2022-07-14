@@ -11,8 +11,8 @@ listint_t *destroy = headPtr;
 while (headPtr)
 {
 headPtr = headPtr->next;
-destroy = headPtr;
 free(destroy);
+destroy = headPtr;
 }
 *head = NULL;
 }
