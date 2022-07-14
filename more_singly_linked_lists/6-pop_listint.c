@@ -7,10 +7,6 @@ int pop_listint(listint_t **head)
 {
 listint_t *new_head;
 int n= 0;
-while (*head != NULL)
-{
-head = &(*head)->next;
-}
 
 if (*head != NULL)
 {
