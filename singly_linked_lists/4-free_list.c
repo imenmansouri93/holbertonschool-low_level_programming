@@ -9,9 +9,10 @@ void free_list(list_t *head)
 list_t *destroy = head;
 while (head)
 {
-head = head->next;
-free(destroy);
 destroy = head;
+head = head->next;
+free(destroy->str);
+free(destroy);
 }
 free(head);
 }
