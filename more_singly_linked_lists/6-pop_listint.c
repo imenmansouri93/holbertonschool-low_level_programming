@@ -14,8 +14,8 @@ success = *head != NULL;
 if (success)
 {
 listint_t *current = *head;
-*head = (*head)->next;
 free(current);
+*head = (*head)->next;
 }
 return(success);
 }
