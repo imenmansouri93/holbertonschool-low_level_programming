@@ -8,8 +8,8 @@ new_node = (listint_t*)malloc(sizeof(listint_t));
 if (new_node == NULL)
 {
 return(NULL);
-new_node ->n = n;
 }
+new_node ->n = n;
 if(idx == 0)
 {
 new_node->next = copy;
