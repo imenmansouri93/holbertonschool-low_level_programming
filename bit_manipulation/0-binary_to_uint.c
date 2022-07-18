@@ -7,7 +7,7 @@ unsigned int binary_to_uint(const char *b)
     unsigned int len;
     if (b == NULL)
     {
-    return(NULL);
+    return(0);
     }
     
     len = strlen(b);
