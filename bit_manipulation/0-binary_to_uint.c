@@ -5,6 +5,11 @@ unsigned int binary_to_uint(const char *b)
     unsigned int i = 0;
     int c;
     unsigned int len;
+    if (b == NULL)
+    {
+    return(NULL);
+    }
+    
     len = strlen(b);
     for (c = len - 1; c >= 0; c--)
     {
