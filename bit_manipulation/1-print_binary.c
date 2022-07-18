@@ -1,19 +1,25 @@
 #include "main.h"
 /**
- * print_binary 
+ * print_binary
  * @n
  * Return:
  */
 void print_binary(unsigned long int n)
 {
-unsigned bit_mask = 0x8000;
-while (bit_mask > 0)
-{
-if ((n & bit_mask) == 0)
-printf("0");
-else
-printf("1");
-bit_mask >>= 1;
-}
-
+    int i;
+    unsigned long int k;
+    int print  = 0;
+    for (i = 32; i >= 0; i--)
+    {
+        k = n >> i;
+        if (k & 1)
+        {
+        print = 1;
+        putchar('1');
+            }
+        else if (print == 1)
+        putchar ('0');
+        
+    }
+     putchar('\n');
 }
