@@ -4,6 +4,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 char *buffer = NULL;
 unsigned int read_size;
 FILE *handler = fopen(filename, "r");
+if (filename == NULL)
+{
+return(0);
+}
 if (handler)
 {
 fseek(handler, 0, SEEK_END);
