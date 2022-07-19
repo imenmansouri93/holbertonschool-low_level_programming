@@ -10,11 +10,6 @@ fseek(handler, 0, SEEK_END);
 letters = ftell(handler);
 rewind(handler);
 buffer = (char *)malloc(sizeof(char) * (letters + 1));
-if (buffer == NULL)
-{
-return(0);
-}
-
 read_size = fread(buffer, sizeof(char), letters, handler);
 buffer[letters] = '\0';
 if (letters != read_size)
@@ -23,5 +18,5 @@ if (letters != read_size)
     buffer = NULL;
 }
 }
-return(0);
+return(*buffer);
 }
