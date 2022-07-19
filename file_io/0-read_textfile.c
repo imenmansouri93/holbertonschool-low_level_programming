@@ -1,22 +1,34 @@
 #include "main.h"
 ssize_t read_textfile(const char *filename, size_t letters)
 {
+int lprint, lread, closed, file;
 char *buffer;
-unsigned int read_size;
-FILE *handler = fopen(filename, "r");
-if (handler)
+file = lprint = lread = 0;
+buffer = malloc (letters * sizeof(char));
+if (filename == NULL)
 {
-fseek(handler, 0, SEEK_END);
-letters = ftell(handler);
-rewind(handler);
-buffer = (char *)malloc(sizeof(char) * (letters + 1));
-read_size = fread(buffer, sizeof(char), letters, handler);
-buffer[letters] = '\0';
-if (letters != read_size)
+return(0);
+}
+file  = open(filename, O_RDONLY);
+if (file == -1)
 {
-    free(buffer);
-    buffer = NULL;
+return (0);
 }
+lread = read(file, buffer, letters);
+if (lread == -1)
+{
+return(0);
 }
-return(*buffer);
+lprint = write(STDIN_FILENO, buffer, lread);
+if (lprint ==  -1)
+{
+return(0);
+}
+closed = close(file);
+if (closed == -1)
+{
+return(0);
+}free(buffer);
+return(lread);
+
 }
