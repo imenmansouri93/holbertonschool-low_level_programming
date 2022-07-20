@@ -10,7 +10,6 @@ unsigned int i = 0;
 current = h;
 if (h == NULL)
 {
-printf("list is empty\n");
 return(0);
 }
 for ( i = 0; current !=  NULL; i++)
