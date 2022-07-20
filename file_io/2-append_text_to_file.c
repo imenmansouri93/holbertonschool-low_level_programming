@@ -18,13 +18,12 @@ if (fd == -1)
 {
 return(-1);
 }
-
 if (text_content != NULL)
 {
 fdwt = write (fd, text_content, len);
 }
 if (fdwt == -1)
-return(-1);
+return (-1);
 close(fd);
-return(1);
+return (1);
 }
