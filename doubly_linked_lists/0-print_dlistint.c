@@ -6,7 +6,7 @@
 size_t print_dlistint(const dlistint_t *h)
 {
 const dlistint_t *current;
-unsigned int i;
+unsigned int i = 0;
 current = h;
 if (h == NULL)
 {
