@@ -5,21 +5,18 @@
  */
 size_t print_dlistint(const dlistint_t *h)
 {
-const dlistint_t *current;
-current = h;
+size_t node = 0;
 if (h == NULL)
 {
 return(0);
+}else
+while (h)
+{
+{
+node++;
+printf("%d\n", h->n);
+h = h->next;
 }
-
-while (current->next != NULL) {
-    current = current->next; 
-  }
-
-  while (current != NULL) {
-    printf("%d\n", current->n);
-    current = current->prev;
-  }
-
-return(1);
+}
+return(node);
 }
