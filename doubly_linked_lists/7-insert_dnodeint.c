@@ -13,7 +13,7 @@ if (new_node == NULL)
 return (NULL);
 }
 new_node->n = n;
-if (copy == NULL || copy->next == NULL)
+if (copy == NULL || (copy->next == NULL && idx !=  0))
 return (NULL);
 if (idx == 0)
 {
