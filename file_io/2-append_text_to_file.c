@@ -15,12 +15,13 @@ if (filename == NULL)
 {
 return (-1);
 }
+fd = open(filename, O_RDONLY | O_APPEND);
+fdwt = write(fd, text_content, len);
 if (text_content != NULL)
 {
-if(fdwt = write(fd, text_content, len) == -1)
+if(fdwt == -1)
 return (-1);
 }
-fd = open(filename, O_RDONLY | O_APPEND);
 if (fd == -1)
 return (-1);
 close(fd);
