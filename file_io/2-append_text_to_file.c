@@ -10,9 +10,7 @@ int append_text_to_file(const char *filename, char *text_content)
 {
 int fd;
 if (filename == NULL)
-{
 return (-1);
-}
 fd = open(filename, O_RDONLY | O_APPEND);
 if (fd == -1)
 return (-1);
@@ -29,7 +27,7 @@ return (1);
  * @str: string
  * Return: int
  */
-int _strlen(char *str)
+int strlen(char *str)
 {
 int l = 0;
 while (str[l])
