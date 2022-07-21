@@ -13,9 +13,8 @@ return(NULL);
 }
 else
 newNode->n = n;
-newNode->prev = NULL;
 newNode->next = *head;
-newNode->prev= newNode;
-*head  = newNode;
+newNode->prev = NULL;
+*head =  newNode;
 return(newNode);
 }
