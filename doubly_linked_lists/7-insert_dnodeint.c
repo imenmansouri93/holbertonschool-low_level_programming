@@ -13,7 +13,7 @@ if (new_node == NULL)
 return (NULL);
 }
 new_node->n = n;
-if (h == NULL || (copy == NULL && copy->next == NULL))
+if (h == NULL || (copy->next==NULL && idx !=  0))
 return (NULL);
 if (idx == 0){
 return(add_dnodeint(h, n));
