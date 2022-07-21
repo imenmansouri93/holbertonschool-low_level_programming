@@ -22,17 +22,4 @@ return (-1);
 close(fd);
 return (1);
 }
-/**
- * _strlen - calculate length of string
- * @str: string
- * Return: int
- */
-int _strlen(char *str)
-{
-int l = 0;
-while (str[l])
-{
-l++;
-}
-return (l);
-}
+
