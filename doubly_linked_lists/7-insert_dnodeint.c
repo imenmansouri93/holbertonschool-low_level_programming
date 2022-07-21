@@ -19,7 +19,7 @@ return (NULL);
 new_node->n = n;
 if ((copy->next == NULL)|| (copy == NULL && idx !=  0))
 return (NULL);
-f (idx == 0){
+if (idx == 0){
 return(add_dnodeint(h, n));
 }
 while (copy != NULL)
