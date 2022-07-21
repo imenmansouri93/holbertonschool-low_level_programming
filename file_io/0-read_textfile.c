@@ -15,15 +15,11 @@ return(0);
 file  = open(filename, O_RDONLY);
 lread = read(file, buffer, letters);
 lprint = write(STDIN_FILENO, buffer, lread);
-closed = close(file);
 if (file == -1 || lprint ==  -1 || lread == -1)
 {   free(buffer);
 return (0);
 }
-if (closed == -1)
-{
-return(0);
-}
 free(buffer);
+close(file);
 return(lprint);
 }
