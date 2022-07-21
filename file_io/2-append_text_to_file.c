@@ -9,10 +9,8 @@
 int append_text_to_file(const char *filename, char *text_content)
 {
 int fd;
-if (filename == NULL)
+if (!filename)
 return (-1);
-else
-{
 fd = open(filename, O_RDONLY | O_APPEND);
 if (fd == -1)
 return (-1);
@@ -20,7 +18,6 @@ if (text_content)
 {
 if (write(fd, text_content, strlen(text_content)) == -1)
 return (-1);
-}
 }
 close(fd);
 return (1);
