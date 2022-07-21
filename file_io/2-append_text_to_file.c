@@ -18,9 +18,7 @@ return (-1);
 fd = open(filename, O_RDONLY | O_APPEND);
 fdwt = write(fd, text_content, len);
 if (fd == -1 || fdwt == -1)
-{
 return (-1);
-}
 close(fd);
 return (1);
 }
