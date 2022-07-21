@@ -1,7 +1,7 @@
 #include "main.h"
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-size_t lprint, lread, closed, file;
+ssize_t lprint, lread, file;
 char *buffer;
 if (filename == NULL)
 {
