@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- * @brief 
+ * insert_dnodeint_at_index - 
  * 
  */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
@@ -13,12 +13,8 @@ if (new_node == NULL)
 return (NULL);
 }
 new_node->n = n;
-if (h == NULL || (copy == NULL && idx !=  0))
+if ((h == NULL && copy->next == NULL)|| (copy == NULL && idx !=  0))
 return (NULL);
-if (copy->next == NULL)
-{
-return(NULL);
-}
 if (idx == 0)
 {
 return(add_dnodeint(h, n));
