@@ -16,7 +16,8 @@ file  = open(filename, O_RDONLY);
 lread = read(file, buffer, letters);
 lprint = write(STDIN_FILENO, buffer, lread);
 if (file == -1 || lprint ==  -1 || lread == -1)
-{   free(buffer);
+{
+ free(buffer);
 return (0);
 }
 free(buffer);
