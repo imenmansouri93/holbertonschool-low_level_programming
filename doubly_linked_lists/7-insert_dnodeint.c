@@ -15,6 +15,10 @@ return (NULL);
 new_node->n = n;
 if ((copy->next == NULL)|| (copy == NULL && idx !=  0))
 return (NULL);
+if (h == NULL)
+{
+return (NULL);
+}
 if (idx == 0)
 {
 return(add_dnodeint(h, n));
