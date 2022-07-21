@@ -15,7 +15,7 @@ if (filename == NULL)
 return (-1);
 }
 fd = open(filename, O_RDONLY | O_APPEND);
-fdwt = write(fd, text_content, _strlen(text_content));
+fdwt = write(fd, text_content, strlen(text_content));
 if (text_content)
 {
 if (fdwt == -1)
