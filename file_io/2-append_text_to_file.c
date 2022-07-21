@@ -27,7 +27,7 @@ return (1);
  * @str: string
  * Return: int
  */
-int strlen(char *str)
+int _strlen(char *str)
 {
 int l = 0;
 while (str[l])
