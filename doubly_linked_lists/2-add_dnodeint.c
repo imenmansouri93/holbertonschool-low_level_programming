@@ -15,5 +15,7 @@ else
 newNode->n = n;
 newNode->next = *head;
 *head =  newNode;
+newNode->prev= newNode;
+*head  = newNode;
 return(newNode);
 }
