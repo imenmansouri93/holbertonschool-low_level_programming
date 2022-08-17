@@ -18,6 +18,5 @@ return (NULL);
 table->array = (hash_node_t **)calloc(table->size, sizeof(hash_node_t *));
 for (i = 0; i < table->size; i++)
 table->array[i] =  NULL;
-free (table);
 return (table);
 }
