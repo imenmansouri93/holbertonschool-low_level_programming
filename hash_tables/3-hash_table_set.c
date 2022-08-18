@@ -48,10 +48,10 @@ return (1);
 }
 tmp = tmp->next;
 }
-new_node =new_t_node(ky, val);
+new_node = new_t_node(ky, val);
 if(!new_node)
 return (0);
 new_node->next = head;
-head = new_node;
+
 return (1);
 }
