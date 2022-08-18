@@ -22,7 +22,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 node_pointer  head, tmp, new_node;
 char_pointer val, ky;
 unsigned long int map;
-if (strlen(key) == 0 || key == NULL || !ht)
+if (strlen(key) == 0 || !key|| !ht)
 {
 return (0);
 }
@@ -34,7 +34,7 @@ tmp = head;
 if (head == NULL)
 {
 new_node = new_t_node(ky, val);
-if(new_node == NULL)
+if(!new_node)
 return (0);
 ht->array[map] = new_node;
 return (1);
@@ -49,7 +49,7 @@ return (1);
 tmp = tmp->next;
 }
 new_node =new_t_node(ky, val);
-if(new_node == NULL)
+if(!new_node)
 return (0);
 new_node->next = head;
 head = new_node;
