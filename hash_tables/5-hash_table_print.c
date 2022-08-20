@@ -19,7 +19,7 @@ node = node->next;
 }
 if (ht == NULL)
 {
-return (NULL);
+return;
 }
 printf("{");
 for (index = 0; index < ht->size; index++)
