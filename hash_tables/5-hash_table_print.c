@@ -8,8 +8,6 @@ void hash_table_print(const hash_table_t *ht)
 {
 node_pointer address;
 unsigned long int index, c = 0, i = 0;
-if (ht == NULL)
-return (NULL);
 for (index = 0; index < ht->size; index++)
 {
 address = ht->array[index];
