@@ -7,6 +7,8 @@
 void hash_table_print(const hash_table_t *ht)
 {
 node_pointer address;
+if (!ht)
+return (NULL);
 unsigned long int index, c = 0, i = 0;
 for (index = 0; index < ht->size; index++)
 {
