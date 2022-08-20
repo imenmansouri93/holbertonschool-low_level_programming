@@ -6,7 +6,7 @@
  */
 void hash_table_print(const hash_table_t *ht)
 {
-node_pointer node;
+node_pointer *node;
 unsigned long int index;
 char  *separator;
 if (ht == NULL)
