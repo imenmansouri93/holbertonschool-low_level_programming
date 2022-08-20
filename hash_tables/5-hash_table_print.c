@@ -27,7 +27,7 @@ for (index = 0; index < ht->size; index++)
 node = ht->array[index];
 while (node)
 {
-printf("'%s': '%s'", node->key, address->value);
+printf("'%s': '%s'", node->key, node->value);
 if (i < c -1)
 printf(", ");
 i++;
