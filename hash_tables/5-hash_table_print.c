@@ -19,6 +19,8 @@ for (index = 0; index < ht->size; index++)
 node = ht->array[index];
 while (node)
 {
+c++;
+node = node->next;
 printf("'%s': '%s'", node->key, node->value);
 if (i < c -1)
 printf(", ");
