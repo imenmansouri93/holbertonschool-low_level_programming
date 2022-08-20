@@ -23,7 +23,7 @@ for (index = 0; index < ht->size; index++)
 address = ht->array[index];
 while (address)
 {
-printf("'%s: '%s'", address->key, address->value);
+printf("'%s': '%s'", address->key, address->value);
 if (i < c -1)
 printf(", ");
 i++;
