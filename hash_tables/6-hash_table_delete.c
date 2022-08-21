@@ -20,6 +20,7 @@ node2 = node1->next;
 free(node1->key);
 free(node1->value);
 free(node1);
+node1  = node2;
 }
 }
 free(ht->array);
