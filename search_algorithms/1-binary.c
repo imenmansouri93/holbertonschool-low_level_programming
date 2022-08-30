@@ -3,35 +3,37 @@
  * @brief
  * 
  */
-int binarysearch(int *tab,size_t begin,size_t end,int key)
+void print_array(int *array, size_t low, size_t high)
 {
-size_t mid;
-if(begin > end )
+size_t i;
+printf("Searching in array: ");
+for (i = low; i <= high; i++)
 {
-return (-1);
+if (i != low)
+printf(", %i", array[i]);
+else
+printf("%i", array[i]);
 }
-mid=(end + begin) / 2;
-if(tab[mid] == key)
-{
-return (mid);
+printf ("\n");
 }
-else if(tab[mid] > key)
-{
-return binarysearch(tab, begin, mid-1, key); 
-}
-else if(tab[mid] < key)
-{
-return binarysearch(tab, mid+1, end, key);
-}
-return (-1);
-}
+
 int binary_search(int *array, size_t size, int value)
 {
-int k;
-if (array == NULL && size ==  0)
+size_t  begin = 0, md, end = size -  1;
+if (array == NULL)
 {
 return (-1);
 }
-k = binarysearch(array,0,size,value);
-return (k);
+while (begin <= end)
+{
+md = (begin + end)/2;
+print_array(array, begin, end);
+if (array[md] < value)
+begin = md + 1;
+else if (array[md] > value)
+end = md - 1;
+else 
+return (md);
+}
+return (1);
 }
