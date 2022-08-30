@@ -35,5 +35,5 @@ end = md - 1;
 else 
 return (md);
 }
-return (1);
+return (-1);
 }
